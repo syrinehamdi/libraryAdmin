@@ -136,6 +136,7 @@ img{
   rgba(16,48,37,255) 100%);
 }
 .img-text{
+  font-size: 0;
   padding: 20px;
   margin-bottom: 20px;
   color: transparent;
@@ -143,6 +144,10 @@ img{
   z-index: 1;
   transform: translateY(145px);
   transition: all .5s cubic-bezier(.13, .62, .81, .91) 0s;
+}
+.booking {
+  width: 0;
+  height: 0;
 }
 .img-text h3{
   font-size: 16px;
@@ -155,6 +160,10 @@ img{
 .img-area:hover .img-text{
   color: white;
   transform: translateY(0);
+}
+.img-area:hover .img-text .booking{
+  width: 50px;
+  height: auto;
 }
 
 /** */
