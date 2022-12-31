@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>List user - LibraryAdmin</title>  <meta content="" name="description">
+  <title>List students - LibraryAdmin</title>  <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
@@ -360,7 +360,7 @@
   <main id="main" class="main">
     <div class="pagetitle">
       <div class="d-flex justify-content-between">
-        <h1>Users list</h1>
+        <h1>Students list</h1>
         <button class="btn btn-outline-dark " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
           <i class="bi bi-plus"></i>
         </button>
@@ -369,7 +369,7 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item">Users</li>
-          <li class="breadcrumb-item active">List users</li>
+          <li class="breadcrumb-item active">List students</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -390,6 +390,7 @@
               <th>Email</th>
               <th>Address</th>
               <th>Phone</th>
+              <th>Class</th>
               <th>Action</th>
           </tr>
       </thead>
@@ -400,6 +401,7 @@
               <td>Edinburgh</td>
               <td>61</td>
               <td>2011-04-25</td>
+              <td>$320,800</td>
               <td>$320,800</td>
               <td>
                 <button class="btn btn-outline-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Edit"><i class="bi bi-pen"></i></button>
@@ -425,6 +427,9 @@
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#student" type="button" role="tab" aria-controls="student" aria-selected="false">Student</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#admin" type="button" role="tab" aria-controls="admin" aria-selected="false">Admin</button>
             </li>
           </ul>
           <div class="tab-content" id="myTabContent">
@@ -592,6 +597,72 @@
                 </div>
                 <div class="col-12 text-center">
                   <button class="btn btn-primary " type="submit">Create new student account !</button>
+                </div>
+            </form>
+            </div>
+            <div class="tab-pane fade" id="admin" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+              <form class="row g-2 needs-validation m-4" novalidate>
+                <div class="col-6">
+                  <label for="idpers" class="form-label">IDPERS</label>
+                  <input type="number" name="idpers" class="form-control" id="idpers" required>
+                  <div class="invalid-feedback">Please, enter id teacher!</div>
+                </div>
+
+                <div class="col-6">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input type="text" name="prenom" class="form-control" id="firstName" required>
+                  <div class="invalid-feedback">Please, enter your first name!</div>
+                </div>
+
+                <div class="col-6">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input type="text" name="nom" class="form-control" id="lastName" required>
+                  <div class="invalid-feedback">Please, enter your last name!</div>
+                </div>
+
+                <div class="col-6">
+                  <label for="yourEmail" class="form-label">Email</label>
+                  <input type="email" name="email" class="form-control" id="yourEmail" required>
+                  <div class="invalid-feedback">Please enter a valid Email adddress!</div>
+                </div>
+
+                <div class="col-6">
+                  <label for="yourPhone" class="form-label">Phone number</label>
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-telephone"></i></span>
+                    <input type="number" class="form-control" id="yourPhone">
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <label for="yourLogin" class="form-label">Login</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" name="login" class="form-control" id="yourLogin" required>
+                    <div class="invalid-feedback">Please choose a login.</div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="yourAddress" class="form-label">Address</label>
+                  <textarea class="form-control" name="adresse" id="yourAddress" rows="2" required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <label for="yourPassword" class="form-label">Password</label>
+                  <input type="password" name="pass" class="form-control" id="yourPassword" required>
+                  <div class="invalid-feedback">Please enter your password!</div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
+                    <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
+                    <div class="invalid-feedback">You must agree before submitting.</div>
+                  </div>
+                </div>
+                <div class="col-12 text-center">
+                  <button class="btn btn-primary " type="submit">Create new admin account !</button>
                 </div>
             </form>
             </div>
